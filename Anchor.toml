@@ -7,6 +7,7 @@ skip-lint = false
 
 [programs.localnet]
 calculator = "BPESfSzUuxqyPX1pXz7PQcYtkGZ4s76W6DZYVUufZ7KE"
+counter = "B5sFkG7nuHi5P98nXwDB4Ter87FZ2ZC9tjkrb6k9NBM5"
 
 [registry]
 url = "https://api.apr.dev"

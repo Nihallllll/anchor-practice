@@ -54,7 +54,7 @@ pub struct NewAccount {
     data: u32,
 }
 
-#[derive(Accounts)]
+#[derive(Accounts)] 
 pub struct Initialize<'info> {
     #[account(init, payer = signer, space = 8 + 4)]
     pub new_account: Account<'info, NewAccount>,
@@ -89,4 +89,4 @@ pub struct Sub<'info> {
     #[account(mut)]
     pub account: Account<'info, NewAccount>,
     pub signer: Signer<'info>,
-}
+} 
