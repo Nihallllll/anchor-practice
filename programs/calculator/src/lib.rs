@@ -27,22 +27,22 @@ pub mod anchor_calculator {
         Ok(())
     }
 
-    pub fn double(ctx: Context<Double>) -> Result<()> {
+    pub fn double(ctx: Context<Common>) -> Result<()> {
         ctx.accounts.account.data = ctx.accounts.account.data * 2;
         Ok(())
     }
     
-    pub fn halve(ctx: Context<Halve>) -> Result<()> {
+    pub fn halve(ctx: Context<Common>) -> Result<()> {
         ctx.accounts.account.data = ctx.accounts.account.data / 2;
         Ok(())
     }
 
-    pub fn add(ctx: Context<Add>, amount: u32) -> Result<()> {
+    pub fn add(ctx: Context<Common>, amount: u32) -> Result<()> {
         ctx.accounts.account.data = ctx.accounts.account.data + amount;
         Ok(())
     }
     
-    pub fn sub(ctx: Context<Sub>, amount: u32) -> Result<()> {
+    pub fn sub(ctx: Context<Common>, amount: u32) -> Result<()> {
         ctx.accounts.account.data = ctx.accounts.account.data - amount;
         Ok(())
     }
@@ -64,29 +64,29 @@ pub struct Initialize<'info> {
 }
 
 #[derive(Accounts)]
-pub struct Double<'info> {
+pub struct Common<'info> {
     #[account(mut)]
     pub account: Account<'info, NewAccount>,
     pub signer: Signer<'info>,
 }
 
-#[derive(Accounts)]
-pub struct Halve<'info> {
-    #[account(mut)]
-    pub account: Account<'info, NewAccount>,
-    pub signer: Signer<'info>,
-}
+// #[derive(Accounts)]
+// pub struct Halve<'info> {
+//     #[account(mut)]
+//     pub account: Account<'info, NewAccount>,
+//     pub signer: Signer<'info>,
+// }
 
-#[derive(Accounts)]
-pub struct Add<'info> {
-    #[account(mut)]
-    pub account: Account<'info, NewAccount>,
-    pub signer: Signer<'info>,
-}
+// #[derive(Accounts)]
+// pub struct Add<'info> {
+//     #[account(mut)]
+//     pub account: Account<'info, NewAccount>,
+//     pub signer: Signer<'info>,
+// }
 
-#[derive(Accounts)]
-pub struct Sub<'info> {
-    #[account(mut)]
-    pub account: Account<'info, NewAccount>,
-    pub signer: Signer<'info>,
-} 
+// #[derive(Accounts)]
+// pub struct Sub<'info> {
+//     #[account(mut)]
+//     pub account: Account<'info, NewAccount>,
+//     pub signer: Signer<'info>,
+// } 
