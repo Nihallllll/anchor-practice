@@ -9,6 +9,7 @@ skip-lint = false
 calculator = "BPESfSzUuxqyPX1pXz7PQcYtkGZ4s76W6DZYVUufZ7KE"
 counter = "B5sFkG7nuHi5P98nXwDB4Ter87FZ2ZC9tjkrb6k9NBM5"
 cpi-contract = "6Cn3NiqpBqFavRqahmvqpsWcgmFCi72cD3wNaY4Y9bNC"
+staking-contract = "AKdCgQfijFLT1nhswBUmrfXn8BBezzfwNHEtemn7ePmj"
 
 [registry]
 url = "https://api.apr.dev"
